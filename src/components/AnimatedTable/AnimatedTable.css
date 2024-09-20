@@ -1,0 +1,70 @@
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f0f0f0;
+  }
+  
+  .image-container {
+	position: relative;
+	width: 600px;
+	height: 400px;
+	overflow: hidden;
+  }
+  
+  .animated-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 1s ease-in-out;
+  }
+  
+  .animated-image:hover {
+	transform: scale(1.1);
+  }
+  
+  .animated-table {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	transition: opacity 1s ease-in-out;
+  }
+  
+  .image-container:hover .animated-table {
+	opacity: 1;
+  }
+  
+  .animated-table table {
+	background-color: rgba(255, 255, 255, 0.8);
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	animation: slideIn 1s ease-in-out forwards;
+  }
+  
+  .animated-table th,
+  .animated-table td {
+	padding: 15px;
+	border: 1px solid #ddd;
+  }
+  
+  @keyframes slideIn {
+	from {
+	  transform: translateY(-100%);
+	}
+	to {
+	  transform: translateY(0);
+	}
+  }
+  

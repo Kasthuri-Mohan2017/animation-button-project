@@ -1,0 +1,15 @@
+.ani-square{
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+	animation-name:kas;
+	animation-duration: 5s;	
+	margin-top: 10px;
+	display: grid;
+
+}
+
+@keyframes kas{
+	from {background-color: blue;}
+	to {background-color: yellow;}
+}
